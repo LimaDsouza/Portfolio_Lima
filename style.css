@@ -200,84 +200,108 @@ p {
 
 /* Experience Section */
 #experience {
-	padding: 20px 0; 
-	background: #907e7e3a; 
-  }
-  
-  .experience .section-title {
-	text-align: center;
-	font-size: 3em; 
-	color: #aaa3a3bd; 
-	font-weight: bold; 
-	margin: 0; 
-	padding-bottom: 20px; 
-  }
-  
-  .experience-list {
-	display: flex;
-	flex-direction: column; /* Stack experience items vertically */
-	align-items: center; /* Center items horizontally */
-	gap: 20px; /* Space between items */
-  }
-  
-  .experience-item {
-	display: flex;
-	align-items: center;
-	width: 80%; /* Adjust width as needed */
-	max-width: 600px; /* Maximum width for larger screens */
-	overflow: hidden;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	background: #e2e0d7; /* Background color for items */
-	position: relative; /* For positioning child elements */
-  }
-  
-  .experience-item:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .experience-logo {
-	margin-right: 20px;
-	position: relative;
-	transition: transform 0.3s ease;
-  }
-  
-  .experience-logo .logo {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-  }
-  
-  .experience-logo:hover .logo {
-	transform: rotate(360deg);
-  }
-  
-  .experience-content {
-	padding: 20px;
-	border-radius: 10px;
-	background: #fdfdfd;
-	opacity: 0; /* Initially hidden */
-	transform: translateX(-100%); /* Initially off-screen to the left */
-	transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .experience-item:hover .experience-content {
-	opacity: 1;
-	transform: translateX(0); /* Slide in from the left */
-  }
-  
-  .experience-details h2 {
-	margin: 0;
-	font-size: 1.5em;
-	color: #333;
-  }
-  
-  .experience-details p {
-	margin: 10px 0 0;
-	color: #666;
-  }
+    padding: 20px 0; 
+    background: #907e7e3a; 
+}
+
+.experience .section-title {
+    text-align: center;
+    font-size: 2em; /* Reduced size for mobile */
+    color: #aaa3a3bd; 
+    font-weight: bold; 
+    margin: 0; 
+    padding-bottom: 20px; 
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column; /* Stack experience items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 0 10px; /* Add some padding to avoid touching edges */
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column; /* Stack logo and content vertically on mobile */
+    align-items: center;
+    width: 100%; /* Full width for mobile */
+    max-width: 600px; /* Maximum width for larger screens */
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #e2e0d7; /* Background color for items */
+    position: relative; /* For positioning child elements */
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-logo {
+    margin-bottom: 10px; /* Adjust margin for mobile */
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.experience-logo .logo {
+    width: 50px; /* Adjust size for mobile */
+    height: 50px; /* Adjust size for mobile */
+    border-radius: 50%;
+}
+
+.experience-logo:hover .logo {
+    transform: rotate(360deg);
+}
+
+.experience-content {
+    padding: 20px;
+    border-radius: 10px;
+    background: #fdfdfd;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Initially off-screen to the left */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience-item:hover .experience-content {
+    opacity: 1;
+    transform: translateX(0); /* Slide in from the left */
+}
+
+.experience-details h2 {
+    margin: 0;
+    font-size: 1.2em; /* Reduced size for mobile */
+    color: #333;
+}
+
+.experience-details p {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .experience .section-title {
+        font-size: 1.5em; /* Further reduced size for very small screens */
+    }
+
+    .experience-item {
+        flex-direction: column; /* Stack logo and content vertically */
+    }
+
+    .experience-logo .logo {
+        width: 40px; /* Further adjust size for very small screens */
+        height: 40px; /* Further adjust size for very small screens */
+    }
+
+    .experience-details h2 {
+        font-size: 1em; /* Further reduced size for very small screens */
+    }
+}
+
+
   
   
   
